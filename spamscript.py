@@ -11,27 +11,28 @@ def say_position(time):
 	sleep(time)
 	global position
 	position = pg.position()
-	return "Координати чату: Х = " + str(position[0]) + " Y = " + str(position[1])
+	print(f"Координати чату: Х = {(position[0])} + Y = {position[1]}")
+	return position
 
-def spam(position, col, message, time):
+def spam(position, number, message, time):
 
-	a = col
+	number
 	#toast.show_toast("Початок спаму", "спам почнеться через",time," секунд, приготуйтесь", duration=20,icon_path = "spam.ico")
 	sleep(time)
 
-	while a > 0:
+	while number > 0:
 
 		pg.click(position)
 		pg.typewrite(message)
 		pg.press("enter")
-		a -= 1
+		number -= 1
 
 	#toast.show_toast("Кінець спаму", "спим закінчився", duration = 20, icon_path = "spam.ico")
 
 if __name__ == "__main__":
 
-	#pos = say_position(8)
-	#print(pos)
+	pos = say_position(8)
+	print(pos)
 	Telegram = (885, 2021)
 	Instagram = (1899, 1933)
 
